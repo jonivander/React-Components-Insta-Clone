@@ -9,20 +9,21 @@ const LikeSection = props => {
   // Make sure the parent of LikeSection is passing the right props!
   const { likePost, likeCount } = props
 
+
   return (
     <div>
       <div
         className="like-section"
         key="likes-icons-container"
       >
-        <div className="like-section-wrapper">
+        <div className="like-section-wrapper" onClick = {likePost}>
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className="like-section-wrapper">
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className="like-number">100 likes</p>
+      <p className="like-number">{likeCount} likes</p>
     </div>
   )
 };
